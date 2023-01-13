@@ -179,7 +179,7 @@ function signIn(e) {
     else{
         sessionStorage.setItem("Test", true);
         sessionStorage.setItem("name", email ); 
-        location.href = "./index.html";
+        location.href = "/";
     }
     e.preventDefault();
 }
