@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <h1>SIGNIN</h1>
+        <form role="form" onsubmit="return signIn(event);" autocomplete="off">
+            <div  id="emailvalid" class="txt_field" class="form-group">
+                <input type="text" name="email" id="email" required>
+                <span class="formerror"></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field" class="form-group">
+                <input type="password" name="pwds" id="pwds"  required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="txt_field" class="form-group">
+                <button style=" padding:7px ; font-size: 15px; border-radius: 10%; background-color:
+                rgb(161, 161, 255); ;color: white; font: bold; " type="submit">SIGN IN</button>
+            </div>
+            <div class="signup_link">
+                Not a member? <a href="./signup.html">Sign up</a>
+              </div>
+        </form>
+       
+   
+    </div>    
+
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>

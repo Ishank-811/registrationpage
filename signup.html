@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .formerror{
+        color:red;
+
+    }
+        .valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+#message{
+    display: none;
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+</style>
+    
+</head>
+
+
+<body>
+
+    <div class="center">
+        <h1>SIGN UP</h1>
+  
+  
+  
+        <form role="form" onsubmit="return signUp(event);" autocomplete="off">
+          <div  class="txt_field" id="firstname" class="form-group">
+            <input type="text" name="fname" id="fname" required>
+            <span class="formerror"></span>
+            <label>First Name</label>
+        </div>
+        <div class="txt_field"  id="lastname" class="form-group">
+          <input type="text" name="lname" id="lname" required>
+          <span></span>
+          <label>Last Name</label>
+      </div>
+      <div   class="txt_field" id="emailvalid" class="form-group">
+        <input type="text" name="email" id="email" required>
+        <span class="formerror"></span>
+        <label>Email</label>
+    </div>
+  
+    <div class="txt_field" id="passwordc" class="form-group">
+      <input type="password" name="pwd" id="pwd" required>
+      <span class="formerror"></span>
+      <label>Password</label>
+      
+  </div>
+  <div id="message">
+    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+    <p id="number" class="invalid">A <b>number</b></p>
+    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+  </div>
+  
+  <div class="txt_field" id="confirmpassword"  class="form-group">
+    <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password" required>
+    <span class="formerror"></span>
+  </div>
+  <div class="form-group">
+    <button style=" padding:10px ; font-size: 20px; border-radius: 10%; background-color:
+     rgb(161, 161, 255); ;color: white; font: bold; "  type="submit">SIGN UP</button>
+  </div>
+          <!-- <input type="submit" value="Login"> -->
+          <div class="signup_link">
+            already a member? <a href="./signin.html">Signin</a>
+          </div>
+        </form>
+  
+  
+  
+      </div>
+
+
+    <script  src="./index.js"></script>
+
+</body>
+
+</html>

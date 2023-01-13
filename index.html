@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+.button1 {
+display: inline-block;
+padding:0.35em 1.2em;
+border:0.1em solid #FFFFFF;
+margin:0 0.3em 0.3em 0;
+border-radius:0.12em;
+box-sizing: border-box;
+font-size:30px;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:#FFFFFF;
+background-color: transparent;
+text-align:center;
+transition: all 0.2s; 
+}
+
+.button1:hover{
+color:#000000;
+background-color:#FFFFFF;
+}
+
+@media all and (max-width:30em){
+a.button1{
+display:block;
+margin:0.4em auto;
+}
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('/download\ \(1\).jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 60px;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <p>Logo</p>
+  </div>
+  <div class="middle">
+    <h1 >WELCOME</h1>
+    <h1 style="font-size: 30px;" id="welcomemsg"></h1>
+  <div id="loginsingup">
+
+    <a href="./signin.html" class="button1">Login</a>
+    <a href="./signup.html" class="button1">Sign up</a>
+</div>
+
+<div id="logoutpage">
+    <Button class="button1" onclick="logout()">Log out</Button>
+</div>
+    <p id="demo" style="font-size:30px"></p>
+  </div>
+  
+   
+</div>
+
+
+</body>
+
+<script >
+    
+let check = sessionStorage.getItem("Test");
+
+if(!check){
+    document.getElementById("logoutpage").style.display = "none";
+     document.getElementById("loginsingup").style.display = "block";
+}else{
+    document.getElementById("logoutpage").style.display = "block";
+    document.getElementById("loginsingup").style.display = "none";
+    document.getElementById("welcomemsg").innerHTML = sessionStorage.getItem("name");
+
+}
+function logout(){
+sessionStorage.removeItem("Test"); 
+sessionStorage.removeItem("name"); 
+location.reload();
+
+}
+
+</script>
+</html>
