@@ -139,7 +139,7 @@ const signUp = e => {
     
         alert("Account Created");
 
-        location.href = "signin.html";
+        location.href = "./signin.html";
       
      }
     else{
